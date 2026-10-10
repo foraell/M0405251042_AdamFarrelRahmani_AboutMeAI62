@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Introduction - Adam Farrel Rahmani</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* Background Utama Website (Slightly Dark Slate) */
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Navigation Bar Atas */
+        /* Navigation Bar Atas Tema SteamHopper */
+        .navbar {
+            background-color: #0f172a;          /* Latar Belakang Dark Slate/Baja Gelap */
+            border-bottom: 2px solid #f97316;   /* Garis Pembatas Bawah Biru Gotchard */
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-content {
+            max-width: 1000px;                  /* Disejajarkan dengan lebar Hero Banner */
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;     /* Brand di Kiri, Tombol di Kanan */
+            align-items: center;
+        }
+
+        /* Tulisan Brand "My Introduction" (Cyan Cerah) */
+        .brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #38bdf8;                     /* Cyan/Biru Cerah SteamHopper */
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        /* Tombol Navigasi di Ujung Kanan (Oranye Menyala) */
+        .nav-btn {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #f97316;          /* Aksen Oranye Gotchard */
+            border: 1px solid #f97316;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(249, 115, 22, 0.2);
+        }
+
+        .nav-btn:hover {
+            background-color: #ea580c;          /* Oranye Lebih Gelap Saat Di-hover */
+            border-color: #ea580c;
+            transform: translateY(-1px);
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 850px;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Banner Biru Metalik (SteamHopper Primary) */
+        .hero-banner {
+            background-color: #0284c7; /* Biru Gotchard */
+            width: 100%;
+            padding: 0.5px 20px 0 20px; 
+            color: #ffffff;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #f97316; /* Garis Oranye Gotchard */
+            overflow: visible; /* Memastikan tidak ada bagian gambar yang terpotong secara paksa */
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-end; /* Membuat foto dan konten menempel di dasar banner */
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-bottom: 0;
+            margin-bottom: auto;
+            margin-top: auto;
+            align-self: center; /* Membuat teks terpusat secara vertikal sejajar dengan container */
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #e0f2fe;
+            margin-bottom: 15px;
+        }
+
+        .hero-image-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        /* Foto Tanpa Border & Menempel Langsung ke Border Oranye */
+        .hero-img {
+            width: 100%;
+            max-width: 365px;
+            height: auto;
+            object-fit: cover;
+            border: none;          /* Menghilangkan border putih */
+            border-radius: 0;      /* Menghilangkan sudut membulat */
+            display: block;        /* Menghilangkan jarak margin/padding tersembunyi di bawah gambar */
+            margin-bottom: 0;
+        }
+
+        .card-section {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            margin-bottom: 36px;
+        }
+
+        /* Judul Seksi dengan Garis Pembatas Oranye Gotchard */
+        .section-header {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #38bdf8;                     
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f97316;   
+        }
+
+        /* My Story */
+        /* My Story (Teks dalam Bubble + Foto di Bawah) */
+        .story-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;                     /* Jarak antara kotak teks dan foto */
+        }
+
+        /* Bubble / Kotak Teks */
+        .story-bubble {
+            background-color: #1e293b;     /* Latar Gelap Kontras */
+            border: 1px solid #38bdf8;     /* Border Abu-abu Steel */
+            border-radius: 12px;
+            padding: 16px 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-bubble .label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #f97316;                 /* Judul Warna Oranye */
+            margin-bottom: 6px;
+        }
+
+        .story-bubble .value {
+            font-size: 0.95rem;
+            font-weight: 250S;
+            color: #f8fafc;                 /* Teks Putih Terang */
+            line-height: 1.6;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* Foto Galeri */
+        .story-img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: 2px solid #040404;     
+            border-radius: 12px;           /* Sudut membulat rapi */
+            display: block;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Skill & Experience */
+        .skill-experience-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;             /* Jarak antara grup Hobi dan grup Minat */
+        }
+
+        /* Sub-Grup Hobi & Minat */
+        .hobby-interest-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;             /* Jarak antara grup Hobi dan grup Minat */
+        }
+        .sub-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .sub-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #94a3b8;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* Kotak Hobi & Minat Gotchard Style */
+        .tag-item {
+            background-color: #1e293b;
+            border: 1px solid #0284c7;             /* Border Biru Gotchard */
+            border-radius: 10px;
+            padding: 10px 18px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #f8fafc;                        /* Teks Putih Jelas */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            display: inline-block;
+        }
+
+        /* Paragraf Harapan */
+        .text-content {
+            color: #cbd5e1;                        /* Teks Terang Mudah Dibaca */
+            font-size: 0.95rem;
+            line-height: 1.8;
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #0284c7;
+            text-align: justify;
+        }
+
+        /* Link Medsos & Kontak */
+        .social-grid {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #f97316;              /* Tombol Oranye Gotchard */
+            border: 1px solid #f97316;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .social-link:hover {
+            background-color: #ea580c;
+            border-color: #ea580c;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 50px;
+        }
+
+        /* Responsif untuk Layar Smartphone */
+        @media (max-width: 640px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="brand">My Introduction</a>
+            <a href="about.html" class="nav-btn">Profile Detail</a>
+        </div>
+    </nav>
+
+    <div class="hero-banner">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>I'm Adam Farrel Rahmani</h1>
+                <p class="hero-subtitle">Mahasiswa IPB University <br> Program Studi Kecerdasan Buatan</p>
+            </div>
+                
+            <div class="hero-image-wrapper">
+                <img src="FotoWeb.png" alt="Adam Farrel Rahmani" class="hero-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card-section">
+            <h2 class="section-header">My Story</h2>     
+            <div class="story-wrapper">
+                <div class="story-bubble">
+                    <div class="label">Hai! Saya Adam Farrel Rahmani</div>
+                    <div class="value">Saya adalah mahasiswa Program Studi Kecerdasan Buatan di IPB University. Alasan saya memilih program studi ini adalah karena minat dan ketertarikan saya dengan teknologi. Saya mau belajar lebih dalam mengenai cara teknologi berkerja dan bagaimana perkembangannya sampai sekarang bahkan hingga di masa depan nanti. Selain itu, pada masa kuliah ini saya juga mau menambah dan mengasah soft skill saya dari kegiatan - kegiatan yang ada. Berikut merupakan dokumentasi atau "cerita" perjalanan saya sejauh ini di IPB.</div>
+                    <img src="MyStory.png" alt="Dokumentasi Adam Farrel Rahmani" class="story-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="card-section">
+            <h2 class="section-header">Skill & Pengalaman</h2>
+                <div class="skill-experience-wrapper">
+                    <div class="tags">
+                        <span class="tag-item">Glory of Prabakara (Logistik)</span>
+                        <span class="tag-item">MPKMB IPB 63 X Agrisimphony 2026 (Lapang Medis)</span>
+                        <span class="tag-item">AICF (Logistik)</span>
+                    </div>
+                </div>
+        </div>
+
+        <div class="card-section">
+            <h2 class="section-header">Hobi & Minat</h2>
+                <div class="hobby-interest-wrapper">
+                    <!-- Sub-bagian Hobi -->
+                    <div class="sub-group">
+                        <span class="sub-label">Hobi:</span>
+                        <div class="tags">
+                            <span class="tag-item">Tokusatsu</span>
+                            <span class="tag-item">Menonton Film</span>
+                        </div>
+                    </div>
+
+                    <div class="sub-group">
+                        <span class="sub-label">Minat:</span>
+                        <div class="tags">
+                            <span class="tag-item">Hardware</span>
+                            <span class="tag-item">Pemrograman</span>
+                            <span class="tag-item">Pengolahan Data</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="card-section">
+            <h2 class="section-header">Harapan Selama Perkuliahan</h2>
+            <p class="text-content">
+                Harapan saya selama kuliah sebagai mahasiswa Kecerdasan Buatan adalah bisa mendapatkan ilmu, wawasan dan pengalaman yang bermanfaat. Saya juga berharap bisa memanfaatkan apa yang didapatkan sejauh ini dan yang akan didapatkan nanti bisa membantu saya berkembang menjadi lebih baik dari sebelumnya dan bahkan berguna bagi orang lain.
+            </p>
+        </div>
+
+        <div class="card-section">
+            <h2 class="section-header">Media Sosial & Kontak</h2>
+            <div class="social-grid">
+                <a href="https://www.linkedin.com/in/adam-farrel-rahmani-13651137b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://github.com/foraell" target="_blank" class="social-link">GitHub</a>
+                <a href="https://www.instagram.com/foraell_?stkn=MWN6cGVycmo0ZGtmcg==" target="_blank" class="social-link">Instagram</a>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2026 Personal Profile Website | Kecerdasan Buatan
+        </footer>
+
+    </div>
+
+</body>
+</html>

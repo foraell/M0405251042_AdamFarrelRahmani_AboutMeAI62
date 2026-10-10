@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Data Diri - Adam Farrel Rahmani</title>
+    <!-- Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* Background Utama Website (Slate Dark) */
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Navigation Bar Atas Tema SteamHopper */
+        .navbar {
+            background-color: #0f172a;          
+            border-bottom: 2px solid #f97316;   
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;     
+            align-items: center;
+        }
+
+        /* Tulisan Brand "My Introduction" (Cyan Cerah) */
+        .brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #38bdf8;                     
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        /* Tombol Navigasi Kembali di Ujung Kanan (Oranye Menyala) */
+        .nav-btn {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #f97316;          
+            border: 1px solid #f97316;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(249, 115, 22, 0.2);
+        }
+
+        .nav-btn:hover {
+            background-color: #ea580c;
+            border-color: #ea580c;
+            transform: translateY(-1px);
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 850px;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card Section */
+        .card-section {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            margin-bottom: 36px;
+        }
+
+        /* Judul Seksi dengan Garis Pembatas Oranye Gotchard */
+        .section-header {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #38bdf8;                     
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f97316;   
+        }
+
+        /* Satu Kotak Besar Membungkus Semua Data (Berjejer Ke Bawah) */
+        .single-info-box {
+            background-color: #1e293b;        /* Latar Gelap Kontras */
+            border: 1px solid #334155;        /* Border Abu-abu Steel */
+            border-radius: 12px;
+            padding: 8px 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Baris Item Data */
+        .info-row {
+            padding: 16px 0;
+            border-bottom: 1px solid #334155;  /* Garis pemisah antar data */
+        }
+
+        /* Hapus garis pemisah pada item terakhir */
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-row .label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #f97316;                    /* Label Warna Oranye */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .info-row .value {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #f8fafc;                    /* Teks Putih Terang */
+        }
+        
+        .social-grid {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #f97316;              /* Tombol Oranye Gotchard */
+            border: 1px solid #f97316;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .social-link:hover {
+            background-color: #ea580c;
+            border-color: #ea580c;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 50px;
+        }
+
+        /* Responsif untuk Layar Smartphone */
+        @media (max-width: 640px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR ATAS -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="brand">My Introduction</a>
+            <!-- Tombol Kembali ke Beranda di Ujung Kanan -->
+            <a href="index.html" class="nav-btn">Homepage</a>
+        </div>
+    </nav>
+
+    <!-- KONTEN UTAMA DETAIL DATA DIRI -->
+    <div class="container">
+        <div class="card-section">
+            <h2 class="section-header">Detail Informasi Akademik & Diri</h2>
+            
+            <!-- SATU KOTAK BESAR MEMBUNGKUS SEMUA DATA -->
+            <div class="single-info-box">
+                
+                <!-- Nama Lengkap -->
+                <div class="info-row">
+                    <div class="label">Nama Lengkap</div>
+                    <div class="value">Adam Farrel Rahmani</div>
+                </div>
+
+                <!-- NIM -->
+                <div class="info-row">
+                    <div class="label">NIM</div>
+                    <div class="value">M0405251042</div>
+                </div>
+
+                <!-- Program Studi -->
+                <div class="info-row">
+                    <div class="label">Program Studi</div>
+                    <div class="value">Kecerdasan Buatan</div>
+                </div>
+
+                <!-- Angkatan -->
+                <div class="info-row">
+                    <div class="label">Angkatan</div>
+                    <div class="value">62/02</div>
+                </div>
+
+                <!-- Kelompok -->
+                <div class="info-row">
+                    <div class="label">Kelompok</div>
+                    <div class="value">Voyager Amber</div>
+                </div>
+
+                <!-- Tempat dan Tanggal Lahir -->
+                <div class="info-row">
+                    <div class="label">Tempat, Tanggal Lahir</div>
+                    <div class="value">Jakarta, 01 Februari 2007</div>
+                </div>
+
+                <!-- Alamat Asal -->
+                <div class="info-row">
+                    <div class="label">Alamat Asal</div>
+                    <div class="value">Perumahan The Address Cluster Platinum, Kecamatan Tapos, Kota Depok</div>
+                </div>
+
+                <!-- Alamat Domisili -->
+                <div class="info-row">
+                    <div class="label">Alamat Domisili</div>
+                    <div class="value">Aparkost Dramaga, Kecamatan Dramaga, Kabupaten Bogor</div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="card-section">
+            <h2 class="section-header">Media Sosial & Kontak</h2>
+            <div class="social-grid">
+                <a href="https://www.linkedin.com/in/adam-farrel-rahmani-13651137b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://github.com/foraell" target="_blank" class="social-link">GitHub</a>
+                <a href="https://www.instagram.com/foraell_?stkn=MWN6cGVycmo0ZGtmcg==" target="_blank" class="social-link">Instagram</a>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2026 Personal Profile Website | Kecerdasan Buatan IPB
+        </footer>
+    </div>
+
+</body>
+</html>
